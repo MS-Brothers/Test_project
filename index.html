@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Web  page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hero">
+        <div class="navbar">
+            <img src="logo .png" class="logo" >
+            <div class="user">
+                <button type="button">Explore</button>
+                <img src="user.png"  >
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="info">
+                <h1>Discovery</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae,<br> dignissimos nesciunt doloremque excepturi repellat officia hic eum repellendus <br>deleniti consequatur, maxime unde similique dolorum, blanditiis inventore aliquam <br>cumque incidunt?</p>
+                <input type="text" placeholder="Search">
+                <input type="email" placeholder="Email-ID">
+            </div>
+            
+        </div>
+
+        <div class="slider">
+            <img src="left-arrow.png
+            " id="prev">
+            <div class="preview">
+                <img src="small1.png" class=" active thumbnell">
+
+                <img src="small2.png" class="thumbnell">
+
+                <img src="small3.png" class="thumbnell">
+
+                <img src="small4.png" class="thumbnell">
+
+                <img src="small5.png" class="thumbnell">
+
+               
+
+
+            </div>
+
+
+
+            <img src="right-arrow.png
+            " id="next">
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        var prev=document.getElementById("prev");
+        var next=document.getElementById("next");
+        var thumbnell=document.getElementById("thumbnell");
+        var hero=document.getElementById("hero");
+
+        var backgroundImg = new Array(
+            "BLUR_IMAGES/bg1.png",
+            "BLUR_IMAGES/bg2.png",
+            "BLUR_IMAGES/bg3.png",
+            "BLUR_IMAGES/bg4.png",
+            "BLUR_IMAGES/bg5.png",
+            
+            );
+
+            let i=0;
+            next.onclick=function(){
+                if(i<4){
+            hero.style.backgroundImg='url("'+backgroundImg[i+1]+'")';
+            i++;
+            }
+            }
+
+            prev.onclick=function(){
+                if(i>0){
+                    hero.style.backgroundImage='url("'+backgroundImg[i-1]+'")';
+                    i--;
+                }
+            }
+
+    </script>
+    
+</body>
+</html>
